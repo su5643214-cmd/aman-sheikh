@@ -1,0 +1,386 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.top-section{
+   width: 100%;
+   height: 80px;
+   background-color: transparent;
+   /* display: none; */
+}
+.hero-section{
+    background-image: url(Neon\ Topographic\ Blobs\ on\ Black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 32px 6%;
+}
+.navbar{
+    margin: 0%;
+    padding: 20px;
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 40%; */
+    justify-content: space-between;
+
+}
+.logo{
+    background-image: url(Minimalist\ Template\ DSGN\ Logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    /* padding: 10px; */
+    /* background-color: aqua; */
+    width: 210px;
+    height: 80px;
+    flex-shrink: 0;
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    width: auto;
+    min-width: 0;
+}
+.links ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 15px;
+}
+.links a:hover{
+    color: aqua;
+} 
+a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 15px;
+}
+.btn{
+    display: flex;
+    align-items: center;
+}
+.btn button {
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(76, 76, 210);
+    color: white;
+    padding: 9px 25px;
+    cursor: pointer;
+}
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+    width: 20px;
+}
+
+.menu-icon span {
+    width: 19px;
+    height: 2px;
+    background-color: white;
+    border-radius: 2px;
+}
+.hero{
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    height: auto;
+    padding: 40px 6%;
+    gap: 40px;
+}
+.left h1{
+    font-size: 75px;
+    color: white;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.search{
+    width: 380px;
+    height: 50px;
+    border: 1.5px solid white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.search input{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 90%;
+    font-size: 16px;
+}
+.search span{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.btns{
+    display: flex;
+    gap: 12px;
+}
+.btn-blue{
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 11px 26px;
+    border-radius: 22px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.btn-border{
+    background: transparent;
+    color: white;
+    border: 1.5px solid white;
+    padding: 11px 26px;
+    border-radius: 22px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.right-box{
+    width: 270px;
+    color: white;
+    margin-top: 40px;
+}
+.mini-logo{
+    background-image: url(mini-logo-png.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 110px;
+    height: 55px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+.right-box h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 12px;
+}
+.right-box p{
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 11px;
+     color: #9a9a9a;
+     line-height: 1.7;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 16px 24px;
+    }
+
+    .logo {
+        width: 170px;
+        height: 68px;
+    }
+
+    .links ul {
+        gap: 14px;
+    }
+
+    ul li a,
+    a {
+        font-size: 14px;
+    }
+
+    .hero {
+        gap: 28px;
+        padding: 36px 32px;
+    }
+
+    .left h1 {
+        font-size: clamp(42px, 6vw, 64px);
+    }
+
+    .right-box {
+        width: 250px;
+        flex-shrink: 0;
+    }
+
+    .search {
+        width: min(380px, 100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .top-section {
+        height: auto;
+        min-height: 70px;
+    }
+
+    .navbar {
+        min-height: 70px;
+        height: auto;
+        padding: 10px 18px;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 145px;
+        height: 58px;
+    }
+
+    /* Keep the desktop links hidden on small screens.
+       The HTML/JavaScript must control opening the mobile menu. */
+    .links ul {
+        display: none;
+    }
+
+    .links {
+        width: auto;
+        gap: 12px;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .menu-icon {
+        display: flex;
+        flex-shrink: 0;
+        width: 28px;
+        padding: 4px;
+    }
+
+    .menu-icon span {
+        display: block;
+        width: 20px;
+        height: 2px;
+    }
+
+    .hero-section {
+        min-height: calc(100vh - 70px);
+        height: auto;
+        padding: 28px 20px;
+        gap: 24px;
+        background-position: center;
+    }
+
+    .hero {
+        min-height: 0;
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 28px 20px 40px;
+        gap: 34px;
+    }
+
+    .left {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .left h1 {
+        font-size: clamp(34px, 7vw, 46px);
+        line-height: 1.12;
+        overflow-wrap: anywhere;
+        margin-bottom: 18px;
+    }
+
+    .search {
+        width: 100%;
+        max-width: 420px;
+        height: 48px;
+        padding: 0 16px;
+        margin-bottom: 22px;
+    }
+
+    .search input {
+        min-width: 0;
+        font-size: 15px;
+    }
+
+    .btns {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .btn-blue,
+    .btn-border {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .right-box {
+        width: 100%;
+        max-width: 420px;
+        margin-top: 0;
+    }
+
+    .right-box h2 {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    .right-box p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 14px;
+    }
+
+    .logo {
+        width: 125px;
+        height: 50px;
+    }
+
+    .hero {
+        padding: 24px 16px 32px;
+        gap: 28px;
+    }
+
+    .left h1 {
+        font-size: clamp(30px, 9vw, 38px);
+    }
+
+    .search {
+        max-width: 100%;
+    }
+
+    .btns {
+        width: 100%;
+    }
+
+    .btn-blue,
+    .btn-border {
+        padding: 10px 15px;
+    }
+
+    .mini-logo {
+        width: 95px;
+        height: 48px;
+    }
+}
